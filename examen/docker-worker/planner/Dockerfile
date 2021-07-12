@@ -9,5 +9,3 @@ ENV TASKS=4
 RUN npm install -y
 
 CMD node main.js
-
-EXPOSE "3000"

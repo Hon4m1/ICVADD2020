@@ -12,4 +12,3 @@ RUN npm install -y
 
 CMD node main.js
 
-EXPOSE "3000"
