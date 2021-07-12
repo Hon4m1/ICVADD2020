@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  worker:
+    build:
+      context: ./worker
+      network: perso
+    ports:
+      - 3000-3009
+
+  planner:
+    build:
+      context: ./planner
+      network: perso
+    environment:
+      - TASKS=4
+    depends_on:
+      - worker
+
+networks:
+  perso:
+    driver: bridge
