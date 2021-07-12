@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+    annuaire:
+        build:
+            context: ./Annuaire
+            network: "host"
+        ports: 
+            - "80:8090"
+    ping:
+        build: 
+            context: ./Ping
+            network: "host"
+        ports: 
+            - "80:8888"
+    pong:
+        build: 
+            context: ./Pong
+            network: "host"
+        ports: 
+            - "80:8889"
